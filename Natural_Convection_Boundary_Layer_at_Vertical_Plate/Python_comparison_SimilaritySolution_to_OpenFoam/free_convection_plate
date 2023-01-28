@@ -1,0 +1,6 @@
+
+
+Gr = (g*beta*(Tplate-Tinf)*L^3) / nu^2
+Grx = (g*beta*(Tplate-Tinf)*x^3) / nu^2
+eta = (y/x) * (Grx/4)^(1/4)
+Tstar = ((T - Tinf) / (Tplate - Tinf))
