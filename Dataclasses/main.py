@@ -1,5 +1,6 @@
 from dataclass_card import DataClassCard
 from regular_card import RegularCard
+from position import Position
 from collections import namedtuple
 
 
@@ -54,3 +55,12 @@ if __name__ == "__main__":
     # card.rank = '9'
     # If you need that your data structure behave like a tuple, then use named 
     # tuples as they are great alternative!
+    
+    print()
+    
+    # Instantiate Position instance
+    pos = Position('Oslo', 10.8, 59.9)
+    # Print instance data
+    print(pos)
+    print(f'{pos.name} is at {pos.lat}°N, {pos.lon}°E.')
+    
