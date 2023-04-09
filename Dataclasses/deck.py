@@ -37,3 +37,14 @@ class Deck:
     #         same as for compare.)
     #   metadata: A mapping with information about the field
     
+    # We can also add our own __repr__() inside Deck dataclass (although it 
+    # exists by default).
+    def __repr__(self):
+        # Note the !s specifier in the {card!s} format string. It means that we 
+        # explicitly want to use the str() representation of each PlayingCard. 
+        # With the new .__repr__(), the representation of Deck is easier on the 
+        # eyes. However, it comes at a cost. You’re no longer able to recreate 
+        # the deck by executing its representation. Often, you’d be better off 
+        # implementing the same representation with .__str__() instead.
+        cards = ', '.join(f'{card!s}' for card in self.cards)
+        return f'{self.__class__.__name__}({cards})'

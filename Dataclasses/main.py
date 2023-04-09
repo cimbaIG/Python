@@ -104,3 +104,14 @@ if __name__ == "__main__":
     print(fields(Position))
     print()
     print(fields(Position)[2].metadata['unit'])
+    
+    print()
+    
+    # Card representation after __str__() method is implemented in PlayingCard 
+    # class.
+    ace_of_spades = PlayingCard('A', '♠')
+    print(ace_of_spades)
+    print(Deck())
+    
+    print()
+    

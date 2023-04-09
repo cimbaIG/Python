@@ -4,3 +4,5 @@ Dataclasses/__pycache__/position.cpython-311.pyc
 Dataclasses/__pycache__/deck.cpython-311.pyc
 Dataclasses/__pycache__/deck.cpython-311.pyc
 .gitignore
+Dataclasses/__pycache__/deck.cpython-311.pyc
+Dataclasses/__pycache__/playing_card.cpython-311.pyc
