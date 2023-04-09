@@ -1,6 +1,8 @@
 from dataclass_card import DataClassCard
 from regular_card import RegularCard
 from position import Position
+from playing_card import PlayingCard
+from deck import Deck
 from collections import namedtuple
 
 
@@ -80,4 +82,15 @@ if __name__ == "__main__":
     vancouver = Position('Vancouver', -123.1, 49.3)
     print(f"Distance from {oslo.name} to {vancouver.name} is " \
           + f"{oslo.distance_to(vancouver)} km.")
+    
+    print()
+    
+    # More flexible data classes
+    # Instantiate objects of PlayingCard and Deck data classes.
+    queen_of_hearts = PlayingCard('Q', 'Hearts')
+    print(queen_of_hearts)
+    ace_of_spades = PlayingCard('A', 'Spades')
+    print(ace_of_spades)
+    two_cards = Deck([queen_of_hearts, ace_of_spades])
+    print(two_cards)
     
