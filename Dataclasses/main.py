@@ -4,6 +4,7 @@ from position import Position
 from playing_card import PlayingCard
 from deck import Deck
 from collections import namedtuple
+from dataclasses import fields
 
 
 if __name__ == "__main__":
@@ -98,3 +99,8 @@ if __name__ == "__main__":
     
     # Advanced default values
     print(Deck())
+    print()
+    # Use .fields() function to retrieve metadata from dataclass
+    print(fields(Position))
+    print()
+    print(fields(Position)[2].metadata['unit'])
