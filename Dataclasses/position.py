@@ -10,8 +10,8 @@ class Position:
     ''' Dataclass that represent geographic positions. '''
     
     name: str
-    lon: float
-    lat: float
+    lon: float = 0.0
+    lat: float = 0.0
 
 # Position dataclass may be created similar to how named tuples are created.
 # Position = make_dataclass("Position", ['name', 'lat', 'lon'])

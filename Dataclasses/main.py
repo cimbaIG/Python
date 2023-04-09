@@ -64,3 +64,12 @@ if __name__ == "__main__":
     print(pos)
     print(f'{pos.name} is at {pos.lat}°N, {pos.lon}°E.')
     
+    print()
+    
+    # Use default values in dataclass (this works exactly as we had specified 
+    # the default values in the definition of the .__init__() method of a 
+    # regular class).
+    print(Position('Null Island'))
+    print(Position('Greenwich', lat=51.8))
+    print(Position('Vancouver', -123.1, 49.3))
+    
