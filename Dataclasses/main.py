@@ -73,3 +73,11 @@ if __name__ == "__main__":
     print(Position('Greenwich', lat=51.8))
     print(Position('Vancouver', -123.1, 49.3))
     
+    print()
+    
+    # Adding methods to dataclass
+    oslo = Position('Oslo', 10.8, 59.9)
+    vancouver = Position('Vancouver', -123.1, 49.3)
+    print(f"Distance from {oslo.name} to {vancouver.name} is " \
+          + f"{oslo.distance_to(vancouver)} km.")
+    
