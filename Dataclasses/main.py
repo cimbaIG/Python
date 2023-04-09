@@ -94,3 +94,7 @@ if __name__ == "__main__":
     two_cards = Deck([queen_of_hearts, ace_of_spades])
     print(two_cards)
     
+    print()
+    
+    # Advanced default values
+    print(Deck())
