@@ -1,17 +1,14 @@
 from dataclasses import dataclass, field
-from playing_card import PlayingCard
+from playing_card import PlayingCard, SUITS, RANKS
 from typing import List
 
 
 @dataclass
 class Deck:
     
-    RANKS = '2 3 4 5 6 7 8 9 10 J Q K A'.split()
-    SUITS = '♣ ♢ ♡ ♠'.split()
-    
     @staticmethod
     def make_french_deck():
-        return [PlayingCard(r, s) for s in Deck.SUITS for r in Deck.RANKS]
+        return [PlayingCard(r, s) for s in SUITS for r in RANKS]
     
     # cards: List[PlayingCard] = Deck.make_french_deck()
     # Don’t do this! This introduces one of the most common anti-patterns in 

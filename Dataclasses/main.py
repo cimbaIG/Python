@@ -5,6 +5,7 @@ from playing_card import PlayingCard
 from deck import Deck
 from collections import namedtuple
 from dataclasses import fields
+from random import sample
 
 
 if __name__ == "__main__":
@@ -88,9 +89,9 @@ if __name__ == "__main__":
     
     # More flexible data classes
     # Instantiate objects of PlayingCard and Deck data classes.
-    queen_of_hearts = PlayingCard('Q', 'Hearts')
+    queen_of_hearts = PlayingCard('Q', '♡')
     print(queen_of_hearts)
-    ace_of_spades = PlayingCard('A', 'Spades')
+    ace_of_spades = PlayingCard('A', '♠')
     print(ace_of_spades)
     two_cards = Deck([queen_of_hearts, ace_of_spades])
     print(two_cards)
@@ -114,4 +115,16 @@ if __name__ == "__main__":
     print(Deck())
     
     print()
+    
+    # Sorting cards
+    queen_of_hearts = PlayingCard('Q', '♡')
+    ace_of_spades = PlayingCard('A', '♠')
+    print(ace_of_spades > queen_of_hearts)
+    # Now we can even sort deck
+    deck = Deck(sorted(Deck.make_french_deck()))
+    print(deck)
+    # But we can always draw a random hand of 10 cards (of course, we do not 
+    # need order=True to do that)
+    deck = Deck(sample(Deck.make_french_deck(), k=10))
+    print(deck)
     
