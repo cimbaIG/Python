@@ -5,6 +5,7 @@ from playing_card import PlayingCard
 from deck import Deck
 from immutable_card import ImmutableCard
 from immutable_deck import ImmutableDeck
+from capital import Capital
 from collections import namedtuple
 from dataclasses import fields
 from random import sample
@@ -154,3 +155,9 @@ if __name__ == "__main__":
     # To avoid this, make sure all fields of an immutable data class use 
     # immutable types (but remember that types are not enforced at runtime). 
     # The ImmutableDeck should be implemented using a tuple instead of a list.
+
+    print()
+    
+    # How to inherit data class?
+    capital = Capital('Oslo', 10.8, 59.9, 'Norway')
+    print(capital)

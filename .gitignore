@@ -1,4 +1,5 @@
 .DS_Store
+Dataclasses/__pycache__/
 Dataclasses/__pycache__/dataclass_card.cpython-311.pyc
 Dataclasses/__pycache__/position.cpython-311.pyc
 Dataclasses/__pycache__/deck.cpython-311.pyc
@@ -11,3 +12,4 @@ Dataclasses/__pycache__/deck.cpython-311.pyc
 Dataclasses/__pycache__/immutable_card.cpython-311.pyc
 Dataclasses/__pycache__/immutable_deck.cpython-311.pyc
 Dataclasses/__pycache__/position.cpython-311.pyc
+Dataclasses/__pycache__/deck.cpython-311.pyc
