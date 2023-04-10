@@ -3,6 +3,8 @@ from regular_card import RegularCard
 from position import Position
 from playing_card import PlayingCard
 from deck import Deck
+from immutable_card import ImmutableCard
+from immutable_deck import ImmutableDeck
 from collections import namedtuple
 from dataclasses import fields
 from random import sample
@@ -128,3 +130,27 @@ if __name__ == "__main__":
     deck = Deck(sample(Deck.make_french_deck(), k=10))
     print(deck)
     
+    print()
+    
+    # Immutable data classes
+    pos = Position('Oslo', 10.8, 59.9)
+    print(pos.name, pos.lat, pos.lon)
+    # This will raise an error: dataclasses.FrozenInstanceError: cannot assign 
+    # to field 'name'
+    # pos.name = 'Stockholm'
+    
+    print()
+    
+    # CAUTION!
+    # # Even though both ImmutableCard and ImmutableDeck are immutable, the 
+    # list holding cards is not. You can therefore still change the cards in 
+    # the deck!
+    queen_of_hearts = ImmutableCard('Q', '♡')
+    ace_of_spades = ImmutableCard('A', '♠')
+    deck = ImmutableDeck([queen_of_hearts, ace_of_spades])
+    print(deck)
+    deck.cards[0] = ImmutableCard('7', '♢')
+    print(deck)
+    # To avoid this, make sure all fields of an immutable data class use 
+    # immutable types (but remember that types are not enforced at runtime). 
+    # The ImmutableDeck should be implemented using a tuple instead of a list.

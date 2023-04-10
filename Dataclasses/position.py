@@ -5,7 +5,11 @@ from math import asin, cos, radians, sin, sqrt
 # Dataclass is a regular Python class. The only difference is that it has basic
 # data model methods like .__init__(), .__repr__() and .__eq__() which are 
 # implemented for us.
-@dataclass
+# One of the defining features of the namedtuple you saw earlier is that it is 
+# immutable. That is, the value of its fields may never change. For many types 
+# of data classes, this is a great idea! To make a data class immutable, set 
+# frozen=True when you create it.
+@dataclass(frozen=True)
 class Position:
     
     ''' Dataclass that represent geographic positions. '''

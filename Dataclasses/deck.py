@@ -45,3 +45,4 @@ class Deck:
         # implementing the same representation with .__str__() instead.
         cards = ', '.join(f'{card!s}' for card in self.cards)
         return f'{self.__class__.__name__}({cards})'
+    
